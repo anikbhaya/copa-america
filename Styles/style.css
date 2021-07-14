@@ -9,9 +9,10 @@
 
 /* Reset CSS */
 *{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    
 }
 
 /* Utilities */
@@ -48,11 +49,17 @@ a{
     background: var(--primary-color);
     color: #fff;
     padding: 10px 24px;
-    transition: background .3s ease-in-out;
+    transition: background .3s linear;
+    border: 1px solid transparent;
 }
 
 .button:hover{
-    background: #9e1547;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+}
+
+#hightlights .button:hover{
+    color: var(--primary-color);
 }
 
 .button i{
@@ -121,6 +128,26 @@ ul.navbar li:hover a{
 
 .showcase .image img{
     width: 100%;
+    position: relative; 
+    animation: imageSwing 3s linear infinite
+}
+ 
+@keyframes imageSwing{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-2deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(2deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 
 .showcase h1{
@@ -218,7 +245,7 @@ ul.navbar li:hover a{
 
 /* Newsletter Section */
 #newsletter{
-    background: var(--primary-color);
+    background: #2d25a0;
     padding: 84px 0;
 }
 
@@ -245,11 +272,6 @@ ul.navbar li:hover a{
     margin-right: 5px;
     outline: none;
     
-}
-
-#newsletter .button{
-    background: #fff;
-    color: var(--primary-color);
 }
 
 
