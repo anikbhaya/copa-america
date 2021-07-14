@@ -325,7 +325,7 @@ ul.navbar li:hover a{
         font-size: 50px;
     }
     header{
-        height: 100vh
+        height: 
     }
     header nav {
         display: none;
@@ -334,11 +334,13 @@ ul.navbar li:hover a{
     .showcase{
         flex-direction: column;
         margin: 0;
+        align-items: flex-start;
     }
 
     .showcase .image{
-        width: 100%;
+        width: 80%;
         margin-top: 45px;
+        align-self: center;
     }
 
     .players{
@@ -366,6 +368,10 @@ ul.navbar li:hover a{
     }
     #newsletter .container form{
         flex-direction: column;
+    }
+
+    #newsletter h3{
+        text-align: center;
     }
 
     #newsletter .container form input{
